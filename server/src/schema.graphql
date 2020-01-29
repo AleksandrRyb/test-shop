@@ -1,0 +1,41 @@
+type AddProductToDbResponse {
+  ok: Boolean!
+  error: String
+  product: Product
+}
+
+type Mutation {
+  AddProductToDb(name: String!, price: Float!, imageUrl: String!): AddProductToDbResponse!
+}
+
+type ConvertTotalPriceResponse {
+  ok: Boolean!
+  error: String
+  priceUsd: Float
+  priceEur: Float
+  priceRub: Float
+}
+
+type Query {
+  ConvertTotalPrice(price: Float!): ConvertTotalPriceResponse!
+  GetProducts: GetProductsResponse!
+}
+
+type GetProductsResponse {
+  ok: Boolean!
+  error: String
+  products: [Product]
+}
+
+type Product {
+  id: Int!
+  name: String!
+  description: String
+  price: Float!
+  inCart: Boolean
+  quantity: Int
+  amount: Int
+  imageUrl: String!
+  createdAt: String!
+  updatedAt: String
+}

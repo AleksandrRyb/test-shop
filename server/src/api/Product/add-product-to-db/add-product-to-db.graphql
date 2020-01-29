@@ -1,0 +1,13 @@
+type AddProductToDbResponse {
+  ok: Boolean!
+  error: String
+  product: Product
+}
+
+type Mutation {
+  AddProductToDb(
+    name: String!
+    price: Float!
+    imageUrl: String!
+  ): AddProductToDbResponse!
+}

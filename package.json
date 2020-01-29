@@ -1,0 +1,8 @@
+{
+  "name": "test-shop",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "origin https://github.com/AleksandrRyb/test-shop.git",
+  "author": "aleksandr tybin",
+  "license": "MIT"
+}

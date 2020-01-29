@@ -1,0 +1,11 @@
+type ConvertTotalPriceResponse {
+  ok: Boolean!
+  error: String
+  priceUsd: Float
+  priceEur: Float
+  priceRub: Float
+}
+
+type Query {
+  ConvertTotalPrice(price: Float!): ConvertTotalPriceResponse!
+}
